@@ -6,10 +6,10 @@
     "node": ">=0.12.0 ~5.9.0",
     "npm": ">=2.14.12 ~3.7.3"
   },
-  "homepage": "https://github.com/MiamiHerald/data-viz_starter",
+  "homepage": "http://MiamiHerald.github.io/data-viz_us-electoral-vote-slider",
   "repository": {
     "type": "git",
-    "url": "git://github.com/MiamiHerald/data-viz_starter.git"
+    "url": "git://github.com/MiamiHerald/data-viz_us-electoral-vote-slider.git"
   },
   "scripts": {
     "start": "gulp",
