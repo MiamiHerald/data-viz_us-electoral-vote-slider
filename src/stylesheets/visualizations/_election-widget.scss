@@ -1,0 +1,76 @@
+.elexresults tr.eln-subhed-table {
+		border-bottom: 1px solid #ccc;
+		color: #aaa;
+		font-size: 12px;
+	}
+	.eln-date {
+		color: #aaa;
+		font-size: 12px;
+	}
+	.eln-date:before {
+		content:"Last Updated: ";
+	}
+	#elexWidget {
+		border-bottom:5px solid #000;
+		padding-bottom: 5px;
+		margin-bottom: 40px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.eln-office-name{
+		display: none;
+	}
+	td.eln-bodyregular:first-of-type {
+		font-size: 12px;
+	}
+	#elexWidget .candidateThumbs {
+		float:right;
+	}
+	#elexWidget .candidateThumbs img {
+		width: 60px;
+		margin-right: 1px;
+	}
+	#elexWidget .candidateThumbs span {
+		margin-right: 59px;
+	}
+	#elexWidget .race-name {
+		font-family:'McClatchy Sans Cond','Roboto Condensed Medium','HelveticaNeue-CondensedBold',sans-serif;
+		margin-bottom:0;
+		margin-top:10px;
+		line-height:1em;
+		text-transform:uppercase
+	}
+	#elexWidget .candidateThumbs img {
+		border-radius:70px;
+	}
+	#elexWidget .more-results {
+		font-family:'McClatchy Sans',Arial,'Helvetica Neue',Helvetica,sans-serif !important; color:#aaa; font-size:12px
+	}
+
+@media screen and (max-width: 600px) {
+    #elexWidget .candidateThumbs img {
+		width: 45px;
+	}
+	#elexWidget .candidateThumbs span {
+		margin-right: 44px;
+	}
+
+}
+@media screen and (max-width: 1200px){
+	.elexresults {
+		margin-bottom:15px;
+	}
+}
+@media screen and (max-width: 1200px) and (min-width: 992px){
+    #elexWidget .candidateThumbs {
+        display: block;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 430px){
+    #elexWidget .candidateThumbs {
+        display: block;
+        float: none;
+    }
+}

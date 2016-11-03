@@ -7,7 +7,12 @@
 {% extends 'layouts/application.html' %}
 
 {% block content %}
-  <div class="container">
-    <h1>Hello World</h1>
+  <div id="elexWidget">
+    {% include 'partials/heading.html' %}
+    {% include 'partials/presidential-race.html' %}
+    {% include 'partials/mayoral-race.html' %}
+    {% include 'partials/senate-race.html' %}
+    {% include 'partials/more-results.html' %}
+    <div style="clear:both"></div>
   </div>
 {% endblock %}
