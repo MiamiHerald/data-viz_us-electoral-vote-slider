@@ -1,0 +1,40 @@
+.electoral-votes {
+  &__number {
+    font-size: 34px;
+    font-family: $heading-font-family-sans;
+    font-weight: bold;
+
+    &--right {
+      color: $red;
+    }
+
+    &--left {
+      color: $blue;
+
+      &:after {
+        content: 'electoral votes';
+        font-weight: lighter;
+        font-size: 12px;
+        color: $dark-grey;
+        margin-left: 0.5em;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: inline-block;
+    vertical-align: middle;
+
+    &--right {
+      text-align: right;
+    }
+
+    span {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $black;
+      font-weight: bold;
+    }
+  }
+}

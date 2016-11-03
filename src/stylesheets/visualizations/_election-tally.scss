@@ -1,0 +1,52 @@
+.tally {
+  &__wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__bar {
+    height: 24px;
+    display: block;
+    background-color: $grey;
+    position: relative;
+
+    &--right {
+      @include position(absolute, 0 0 0 null);
+      background-color: $red;
+      width: 0%;
+      transition: width 0.3s ease-in-out;
+    }
+
+    &--left {
+      @include position(absolute, 0 null 0 0);
+      background-color: $blue;
+      width: 0%;
+      transition: width 0.3s ease-in-out;
+    }
+  }
+
+  &__candidate {
+    margin-bottom: 1em;
+
+    &--wrapper {
+      @include span-columns(4 of 8);
+    }
+
+    &--right {
+      float: right;
+    }
+
+    &__image {
+      border-radius: 70px;
+      display: inline-block;
+
+      &--left {
+        margin-right: 20px;
+      }
+
+      &--right {
+        margin-left: 20px;
+      }
+    }
+  }
+}
