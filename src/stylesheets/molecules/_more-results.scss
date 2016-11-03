@@ -1,0 +1,21 @@
+.more-results {
+  margin-left: 20px;
+  li {
+    display: inline-block;
+    border-right: solid 1px $dark-grey;
+    padding: 0 5px;
+
+    &__heading {
+      padding-right: 2.5px;
+    }
+
+    &:first-child,
+    &:last-child {
+      border: none;
+    }
+
+    a {
+      color: $black;
+    }
+  }
+}

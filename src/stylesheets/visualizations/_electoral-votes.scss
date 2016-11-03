@@ -1,6 +1,9 @@
 .electoral-votes {
   &__number {
-    font-size: 34px;
+    font-size: 30px;
+    @include media($medium-screen-up) {
+      font-size: 34px;
+    }
     font-family: $heading-font-family-sans;
     font-weight: bold;
 
@@ -18,7 +21,7 @@
           font-size: 12px;
           color: $dark-grey;
           margin-left: 0.5em;
-        }  
+        }
       }
     }
   }

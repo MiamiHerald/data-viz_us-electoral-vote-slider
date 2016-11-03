@@ -1,8 +1,10 @@
 .tally {
   &__wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 40px;
+    border-bottom: solid 1px $light-grey;
+    margin-bottom: 1em;
   }
 
   &__bar {
@@ -26,10 +28,11 @@
     }
 
     &--median {
-      @include position(absolute, -50px null null 50%);
+      @include position(absolute, -30px null null 50%);
       transform: translate(-50%, -50%);
-      width: 50px;
+      width: 66px;
       @include media($medium-screen-up) {
+        top: -50px;
         width: 100px;
       }
       img {
@@ -60,15 +63,24 @@
     }
 
     &__image {
-      border-radius: 70px;
+      border-radius: 50%;
       display: inline-block;
+      width: 50px;
+
+      @include media($medium-screen-up) {
+        width: auto;
+      }
 
       &--left {
-        margin-right: 20px;
+        @include media($medium-screen-up) {
+          margin-right: 20px;
+        }
       }
 
       &--right {
-        margin-left: 20px;
+        @include media($medium-screen-up) {
+          margin-left: 20px;
+        }
       }
     }
   }
