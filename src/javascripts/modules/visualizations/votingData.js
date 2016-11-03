@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import { TweenLite } from 'gsap';
 import numeral from 'numeral';
+import moment from 'moment';
 import * as pym from 'pym.js'
 
 class Tally {
@@ -13,11 +14,13 @@ class Tally {
     this.donaldBarEl = $(`#donaldBar`);
     this.hillaryVotesEl = $(`#hillaryVotes`);
     this.donaldVotesEl = $(`#donaldVotes`);
+    this.timestampEl = $(`#jsTimestamp`);
     this.totalElectors = 538;
   }
 
   render() {
     $.getJSON(this.dataUrl).done((data) => {
+      this.timestamp = data.Sumtable.timestamp;
       this.candidates = data.Sumtable.Cand;
       this.setResults();
     });
@@ -46,6 +49,7 @@ class Tally {
     this.donaldBarEl.width(`${(this.candidates[1].ElectLead * 100) / this.totalElectors}%`)
     this.hillaryVotesEl.html(`${numeral(this.candidates[0].PopVote).format('0,0')} votes (${this.candidates[0].PopPct}%)`)
     this.donaldVotesEl.html(`${numeral(this.candidates[1].PopVote).format('0,0')} votes (${this.candidates[1].PopPct}%)`)
+    this.timestampEl.html(`Last Updated: ${moment(this.timestamp).format('MMMM DD, YYYY - hh:mmA')} ET`);
   }
 }
 

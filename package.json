@@ -72,6 +72,7 @@
     "lodash": "4.6.1",
     "lolex": "1.4.0",
     "mocha": "2.4.5",
+    "moment": "^2.15.2",
     "morgan": "1.7.0",
     "numeral": "^1.5.3",
     "object-assign": "4.0.1",
