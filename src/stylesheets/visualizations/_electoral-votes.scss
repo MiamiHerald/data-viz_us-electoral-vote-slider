@@ -11,12 +11,14 @@
     &--left {
       color: $blue;
 
-      &:after {
-        content: 'electoral votes';
-        font-weight: lighter;
-        font-size: 12px;
-        color: $dark-grey;
-        margin-left: 0.5em;
+      @include media($medium-screen-up) {
+        &:after {
+          content: 'electoral votes';
+          font-weight: lighter;
+          font-size: 12px;
+          color: $dark-grey;
+          margin-left: 0.5em;
+        }  
       }
     }
   }

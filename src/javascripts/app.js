@@ -1,5 +1,5 @@
-import { loadExample } from './modules/visualizations/example';
-loadExample();
+import { loadVotingData } from './modules/visualizations/votingData';
+loadVotingData();
 
 import { loadDisplayCandidates } from './modules/utilities/displayCandidates';
 loadDisplayCandidates();
