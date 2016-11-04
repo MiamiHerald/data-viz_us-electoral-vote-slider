@@ -21,21 +21,21 @@ class Tally {
   }
 
   render() {
-    $(window).on(`load`, () => {
-      this.pymChild = new pym.Child({ renderCallback: this.resizeContainer.bind(this) });
-    });
-    $(window).on(`resize`, this.resizeContainer.bind(this));
     this.fetchData();
+    // $(window).on(`load`, () => {
+    //   this.pymChild = new pym.Child({ renderCallback: this.resizeContainer.bind(this) });
+    // });
+    // $(window).on(`resize`, this.resizeContainer.bind(this));
   }
 
-  resizeContainer() {
-    window.requestAnimationFrame(() => {
-      console.log(`pym loaded`);
-      if (this.pymChild) {
-        this.pymChild.sendHeight();
-      }
-    });
-  }
+  // resizeContainer() {
+  //   window.requestAnimationFrame(() => {
+  //     if (this.pymChild) {
+  //       console.log(this.pymChild)
+  //       this.pymChild.sendHeight();
+  //     }
+  //   });
+  // }
 
   fetchData() {
     $.getJSON(this.dataUrl).done((data) => {
