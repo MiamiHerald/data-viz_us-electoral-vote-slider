@@ -20,7 +20,19 @@ class Tally {
   }
 
   render() {
+    $(window).on(`load`, () => {
+      this.pymChild = new pym.Child({ renderCallback: this.resizeContainer.bind(this) });
+    });
+    $(window).on(`resize`, this.resizeContainer.bind(this));
     this.fetchData();
+  }
+
+  resizeContainer() {
+    window.requestAnimationFrame(() => {
+      if (this.pymChild) {
+        this.pymChild.sendHeight();
+      }
+    });
   }
 
   fetchData() {
