@@ -3,3 +3,7 @@ loadVotingData();
 
 import { loadDisplayCandidates } from './modules/utilities/displayCandidates';
 loadDisplayCandidates();
+
+$(`#reloadVotingData`).click(() => {
+  loadDisplayCandidates();
+});

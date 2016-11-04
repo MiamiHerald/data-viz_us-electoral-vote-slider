@@ -30,8 +30,35 @@
     display: inline-block;
     vertical-align: middle;
 
+    &--left {
+      position: relative;
+
+      i.clinton {
+        display: none;
+
+        &.is-winner {
+          display: block;
+          @include position(absolute, 0 null null 50%);
+          color: green;
+          width: 100%;
+        }
+      }
+    }
+
     &--right {
+      position: relative;
       text-align: right;
+
+      i.trump {
+        display: none;
+
+        &.is-winner {
+          display: block;
+          @include position(absolute, 0 null null -100%);
+          color: green;
+          width: 100%;
+        }
+      }
     }
 
     span {

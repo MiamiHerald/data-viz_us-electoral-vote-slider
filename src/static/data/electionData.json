@@ -1,1 +1,62 @@
-{ "Sumtable": {"PrecinctsPct": "46", "office": "President", "Test": "1", "timestamp": "2016-11-02T17:54:09Z",  "Cand": [{"name": "Clinton", "CandID": "1746", "party": "Dem", "Winner": "", "PopVote": "18839463", "PopPct": "41", "StatesWon": "0", "ElectWon": "0", "StatesLead": "25", "ElectLead": "281"}, {"name": "Trump", "CandID": "8639", "party": "GOP", "Winner": "", "PopVote": "18599553", "PopPct": "41", "StatesWon": "0", "ElectWon": "0", "StatesLead": "27", "ElectLead": "257"}, {"name": "Johnson", "CandID": "31708", "party": "Lib", "Winner": "", "PopVote": "3777414", "PopPct": "8", "StatesWon": "0", "ElectWon": "0", "StatesLead": "0", "ElectLead": "0"}, {"name": "Others", "Winner": "", "PopVote": "2545647", "PopPct": "6", "StatesWon": "0", "ElectWon": "0", "StatesLead": "0", "ElectLead": "0"}, {"name": "Stein", "CandID": "895", "party": "Grn", "Winner": "", "PopVote": "2061765", "PopPct": "4", "StatesWon": "0", "ElectWon": "0", "StatesLead": "0", "ElectLead": "0"}]}}
+{
+    "Sumtable": {
+        "PrecinctsPct": "46",
+        "office": "President",
+        "Test": "1",
+        "timestamp": "2016-11-02T17:54:09Z",
+        "Cand": [{
+            "name": "Clinton",
+            "CandID": "1746",
+            "party": "Dem",
+            "Winner": "",
+            "PopVote": "18839463",
+            "PopPct": "41",
+            "StatesWon": "0",
+            "ElectWon": "0",
+            "StatesLead": "25",
+            "ElectLead": "281"
+        }, {
+            "name": "Trump",
+            "CandID": "8639",
+            "party": "GOP",
+            "Winner": "",
+            "PopVote": "18599553",
+            "PopPct": "41",
+            "StatesWon": "0",
+            "ElectWon": "0",
+            "StatesLead": "27",
+            "ElectLead": "257"
+        }, {
+            "name": "Johnson",
+            "CandID": "31708",
+            "party": "Lib",
+            "Winner": "",
+            "PopVote": "3777414",
+            "PopPct": "8",
+            "StatesWon": "0",
+            "ElectWon": "0",
+            "StatesLead": "0",
+            "ElectLead": "0"
+        }, {
+            "name": "Others",
+            "Winner": "",
+            "PopVote": "2545647",
+            "PopPct": "6",
+            "StatesWon": "0",
+            "ElectWon": "0",
+            "StatesLead": "0",
+            "ElectLead": "0"
+        }, {
+            "name": "Stein",
+            "CandID": "895",
+            "party": "Grn",
+            "Winner": "",
+            "PopVote": "2061765",
+            "PopPct": "4",
+            "StatesWon": "0",
+            "ElectWon": "0",
+            "StatesLead": "0",
+            "ElectLead": "0"
+        }]
+    }
+}
