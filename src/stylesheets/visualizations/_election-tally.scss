@@ -72,12 +72,14 @@
       }
 
       &--left {
+        margin-right: 5px;
         @include media($medium-screen-up) {
           margin-right: 20px;
         }
       }
 
       &--right {
+        margin-left: 5px;
         @include media($medium-screen-up) {
           margin-left: 20px;
         }
