@@ -30,6 +30,7 @@ class Tally {
 
   resizeContainer() {
     window.requestAnimationFrame(() => {
+      console.log(`pym loaded`);
       if (this.pymChild) {
         this.pymChild.sendHeight();
       }
@@ -38,7 +39,6 @@ class Tally {
 
   fetchData() {
     $.getJSON(this.dataUrl).done((data) => {
-      console.log(data);
       this.timestamp = data.Sumtable.timestamp;
       this.candidates = data.Sumtable.Cand;
       this.setResults();
