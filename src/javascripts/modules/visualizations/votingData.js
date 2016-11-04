@@ -81,10 +81,8 @@ class Tally {
       if (x.Winner === "X") {
         if (x.name === "Clinton") {
           $(`.fa-check.clinton`).addClass(`is-winner`);
-          this.hillaryBarEl.addClass(`is-winner`);
         } else if (x.name === "Trump") {
           $(`.fa-check.clinton`).addClass(`is-winner`);
-          this.donaldBarEl.addClass(`is-winner`);
         }
       }
     });
