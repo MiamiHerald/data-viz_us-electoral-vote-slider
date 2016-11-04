@@ -38,8 +38,11 @@
 
         &.is-winner {
           display: block;
-          @include position(absolute, 0 null null 50%);
-          color: green;
+          @include position(absolute, -15% null null 110%);
+          @include media($medium-screen-up) {
+            @include position(absolute, 0 null null 50%);
+          }
+          color: $red;
           width: 100%;
         }
       }
@@ -54,8 +57,11 @@
 
         &.is-winner {
           display: block;
-          @include position(absolute, 0 null null -100%);
-          color: green;
+          @include position(absolute, -15% 110% null null);
+          @include media($medium-screen-up) {
+            @include position(absolute, 0 null null -100%);
+          }
+          color: $red;
           width: 100%;
         }
       }

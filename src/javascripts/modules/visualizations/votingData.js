@@ -20,6 +20,10 @@ class Tally {
   }
 
   render() {
+    this.fetchData();
+  }
+
+  fetchData() {
     $.getJSON(this.dataUrl).done((data) => {
       this.timestamp = data.Sumtable.timestamp;
       this.candidates = data.Sumtable.Cand;
