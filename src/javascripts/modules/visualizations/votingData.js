@@ -17,6 +17,7 @@ class Tally {
     this.donaldVotesEl = $(`#donaldVotes`);
     this.timestampEl = $(`#jsTimestamp`);
     this.totalElectors = 538;
+    this.pymChild = null;
   }
 
   render() {
