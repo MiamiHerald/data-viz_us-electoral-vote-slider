@@ -1,3 +1,34 @@
 .refresh {
   float: right;
+
+  a {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+
+    i {
+      transform: rotate(0deg);
+      transform-origin: center;
+    }
+
+    &:hover {
+      i { animation: spinArrows 2s linear infinite; }
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      opacity: 0;
+      transition: opacity 0.3s linear;
+      content: 'reload';
+      @include position(absolute, 50% null null -50px);
+      transform: translateY(-50%);
+    }
+
+    @keyframes spinArrows {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg) }
+    }
+  }
 }

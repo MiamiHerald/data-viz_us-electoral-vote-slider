@@ -25,6 +25,7 @@ class Tally {
 
   fetchData() {
     $.getJSON(this.dataUrl).done((data) => {
+      console.log(data);
       this.timestamp = data.Sumtable.timestamp;
       this.candidates = data.Sumtable.Cand;
       this.setResults();
