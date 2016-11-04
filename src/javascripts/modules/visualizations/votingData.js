@@ -26,6 +26,9 @@ class Tally {
       this.pymChild = new pym.Child({ renderCallback: this.resizeContainer.bind(this) });
     });
     $(window).on(`resize`, this.resizeContainer.bind(this));
+    setTimeout(() => {
+      $(window).trigger('resize');
+    }, 1000);
   }
 
   resizeContainer() {
