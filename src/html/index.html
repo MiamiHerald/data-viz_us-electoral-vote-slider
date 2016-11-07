@@ -7,14 +7,16 @@
 {% extends 'layouts/application.html' %}
 
 {% block content %}
-  <div id="elexWidget">
-    {% include 'partials/heading.html' %}
-    {% include 'partials/electoral-tally.html' %}
-    {% include 'partials/presidential-race.html' %}
-    {% include 'partials/mayoral-race.html' %}
-    {% include 'partials/senate-race.html' %}
-    <div style="clear: both;"></div>
-    {% include 'partials/more-results.html' %}
-    <div style="clear: both;"></div>
+  <div id="elexWrapper">
+    <div id="elexWidget">
+      {% include 'partials/heading.html' %}
+      {% include 'partials/electoral-tally.html' %}
+      {% include 'partials/presidential-race.html' %}
+      {% include 'partials/mayoral-race.html' %}
+      {% include 'partials/senate-race.html' %}
+      <div style="clear: both;"></div>
+      {% include 'partials/more-results.html' %}
+      <div style="clear: both;"></div>
+    </div>
   </div>
 {% endblock %}

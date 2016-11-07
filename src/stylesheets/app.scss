@@ -1,17 +1,20 @@
-@import 'bourbon';
-@import 'neat';
+#elexWrapper {
+  @import 'normalize';
+  @import 'bourbon';
+  @import 'neat';
 
-@import 'base/grid-settings';
-@import 'base/variables';
-@import 'base/typography';
-@import 'base/layout';
+  @import 'base/grid-settings';
+  @import 'base/variables';
+  @import 'base/typography';
+  @import 'base/layout';
 
-@import 'atoms/container';
-@import 'atoms/row';
+  @import 'atoms/container';
+  @import 'atoms/row';
 
-@import 'molecules/more-results';
-@import 'molecules/refresh';
+  @import 'molecules/more-results';
+  @import 'molecules/refresh';
 
-@import 'visualizations/election-widget';
-@import 'visualizations/election-tally';
-@import 'visualizations/electoral-votes';
+  @import 'visualizations/election-widget';
+  @import 'visualizations/election-tally';
+  @import 'visualizations/electoral-votes';
+}
