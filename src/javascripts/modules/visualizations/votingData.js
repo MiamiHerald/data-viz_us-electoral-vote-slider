@@ -34,7 +34,6 @@ class Tally {
   resizeContainer() {
     window.requestAnimationFrame(() => {
       if (this.pymChild) {
-        console.log(this.pymChild.sendHeight())
         this.pymChild.sendHeight();
       }
     });
@@ -44,15 +43,24 @@ class Tally {
     $.getJSON(this.dataUrl).done((data) => {
       this.timestamp = data.Sumtable.timestamp;
       this.candidates = data.Sumtable.Cand;
+      this.candidates.forEach(v => {
+        if (v.CandID === "1746") {
+          this.hillaryObj = v;
+        }
+        if (v.CandID === "8639") {
+          this.donaldObj = v;
+        }
+      });
+      console.log(this.hillaryObj, this.donaldObj);
       this.setResults();
     });
   }
 
   setResults() {
     let hillaryStart = {var: 0};
-    let hillaryEnd = {var: this.candidates[0].ElectWon};
+    let hillaryEnd = {var: this.hillaryObj.ElectWon};
     let donaldStart = {var: 0};
-    let donaldEnd = {var: this.candidates[1].ElectWon};
+    let donaldEnd = {var: this.donaldObj.ElectWon};
     TweenMax.to(hillaryStart, 1, {var: hillaryEnd.var, onUpdate: () => {
         this.hillaryCountEl.html(`${Math.ceil(hillaryStart.var)}`);
       },
@@ -67,10 +75,10 @@ class Tally {
   }
 
   calculatePercentages() {
-    this.hillaryBarEl.width(`${(this.candidates[0].ElectWon * 100) / this.totalElectors}%`)
-    this.donaldBarEl.width(`${(this.candidates[1].ElectWon * 100) / this.totalElectors}%`)
-    this.hillaryVotesEl.html(`${numeral(this.candidates[0].PopVote).format('0,0')} votes (${this.candidates[0].PopPct}%)`)
-    this.donaldVotesEl.html(`${numeral(this.candidates[1].PopVote).format('0,0')} votes (${this.candidates[1].PopPct}%)`)
+    this.hillaryBarEl.width(`${(this.hillaryObj.ElectWon * 100) / this.totalElectors}%`)
+    this.donaldBarEl.width(`${(this.donaldObj.ElectWon * 100) / this.totalElectors}%`)
+    this.hillaryVotesEl.html(`${numeral(this.hillaryObj.PopVote).format('0,0')} votes (${this.hillaryObj.PopPct}%)`)
+    this.donaldVotesEl.html(`${numeral(this.donaldObj.PopVote).format('0,0')} votes (${this.donaldObj.PopPct}%)`)
     this.timestampEl.html(`Last Updated: ${moment(this.timestamp).format('MMMM DD, YYYY - hh:mmA')} ET`);
 
     this.checkWinner();
@@ -79,9 +87,9 @@ class Tally {
   checkWinner() {
     this.candidates.forEach(x => {
       if (x.Winner === "X") {
-        if (x.name === "Clinton") {
+        if (x.CandID === "1746") {
           $(`.fa-check.clinton`).addClass(`is-winner`);
-        } else if (x.name === "Trump") {
+        } else if (x.CandID === "8639") {
           $(`.fa-check.clinton`).addClass(`is-winner`);
         }
       }
