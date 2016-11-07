@@ -30,10 +30,10 @@
     &--median {
       @include position(absolute, -30px null null 50%);
       transform: translate(-50%, -50%);
-      width: 66px;
+      width: 100px;
       @include media($medium-screen-up) {
         top: -50px;
-        width: 100px;
+        width: 175px;
       }
       img {
         max-width: 100%;
@@ -91,5 +91,6 @@
     font-size: 12px;
     color: $dark-grey;
     margin-bottom: 2em;
+    text-transform: capitalize;
   }
 }

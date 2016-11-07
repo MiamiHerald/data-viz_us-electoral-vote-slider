@@ -16,7 +16,7 @@
 
       @include media($medium-screen-up) {
         &:after {
-          content: 'electoral votes';
+          content: 'votos electorales';
           font-weight: lighter;
           font-size: 12px;
           color: $dark-grey;
