@@ -90,7 +90,7 @@ class Tally {
         if (x.CandID === "1746") {
           $(`.fa-check.clinton`).addClass(`is-winner`);
         } else if (x.CandID === "8639") {
-          $(`.fa-check.clinton`).addClass(`is-winner`);
+          $(`.fa-check.trump`).addClass(`is-winner`);
         }
       }
     });
