@@ -1,16 +1,16 @@
 .more-results {
   margin-left: 20px;
-  font-family:'McClatchy Sans',Arial,'Helvetica Neue',Helvetica,sans-serif !important;
-  color: #aaa !important;
-  font-size: 12px !important;
 
   li {
     display: inline-block;
     border-right: solid 1px $dark-grey;
     padding: 0 5px;
+    font-family:'McClatchy Sans',Arial,'Helvetica Neue',Helvetica,sans-serif !important;
+    font-size: 12px !important;
 
     &__heading {
       padding-right: 2.5px;
+      color: #aaa !important;
     }
 
     &:first-child,
