@@ -18,15 +18,19 @@ const loadDisplayCandidates = () => {
   });
 
   $('#presidentialRace td.eln-bodyregular').first().text(function() {
-    return $(this).text().replace('of', 'de').replace('Precincts Reporting', 'Foo Bar');
+    return $(this).text().replace('of', 'de').replace('Precincts Reporting', 'Recintos Reportados');
   });
 
   $('#mayoralRace td.eln-bodyregular').first().text(function() {
-    return $(this).text().replace('of', 'de').replace('Precincts Reporting', 'Foo Bar');
+    return $(this).text().replace('of', 'de').replace('Precincts Reporting', 'Recintos Reportados');
   });
 
   $('#senateRace td.eln-bodyregular').first().text(function() {
-    return $(this).text().replace('of', 'de').replace('Precincts Reporting', 'Foo Bar');
+    return $(this).text().replace('of', 'de').replace('Precincts Reporting', 'Recintos Reportados');
+  });
+
+  $("#mayoralRace td.eln-bodyregular:contains('Carlos Gimenez')").text(function() {
+    return $(this).text().replace('Carlos Gimenez', 'Carlos Giménez');
   });
 }
 
