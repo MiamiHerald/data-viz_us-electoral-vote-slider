@@ -29,8 +29,8 @@ const loadDisplayCandidates = () => {
     return $(this).text().replace('of', 'de').replace('Precincts Reporting', 'Recintos Reportados');
   });
 
-  $("#mayoralRace td.eln-bodyregular:contains('Carlos Gimenez')").text(function() {
-    return $(this).text().replace('Carlos Gimenez', 'Carlos Giménez');
+  $("#mayoralRace td.eln-bodyregular:contains('Gimenez, Carlos')").text(function() {
+    return $(this).text().replace('Gimenez, Carlos', 'Giménez, Carlos');
   });
 }
 
