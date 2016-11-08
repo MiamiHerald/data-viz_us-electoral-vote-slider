@@ -61,9 +61,9 @@ class Tally {
   calculatePercentages() {
     this.hillaryBarEl.width(`${(this.hillaryObj.ElectWon * 100) / this.totalElectors}%`)
     this.donaldBarEl.width(`${(this.donaldObj.ElectWon * 100) / this.totalElectors}%`)
-    this.hillaryVotesEl.html(`${numeral(this.hillaryObj.PopVote).format('0,0')} votes (${this.hillaryObj.PopPct}%)`)
-    this.donaldVotesEl.html(`${numeral(this.donaldObj.PopVote).format('0,0')} votes (${this.donaldObj.PopPct}%)`)
-    this.timestampEl.html(`Last Updated: ${moment(this.timestamp).format('MMMM DD, YYYY - hh:mmA')} ET`);
+    this.hillaryVotesEl.html(`${numeral(this.hillaryObj.PopVote).format('0,0')} votos (${this.hillaryObj.PopPct}%)`)
+    this.donaldVotesEl.html(`${numeral(this.donaldObj.PopVote).format('0,0')} votos (${this.donaldObj.PopPct}%)`)
+    this.timestampEl.html(`Última Actualización: ${moment(this.timestamp).format('MMMM DD, YYYY - hh:mmA')} ET`);
 
     this.checkWinner();
   }
