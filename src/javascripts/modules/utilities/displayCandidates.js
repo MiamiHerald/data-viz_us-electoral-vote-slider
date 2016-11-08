@@ -9,8 +9,8 @@ const loadDisplayCandidates = () => {
   $("#presidentialRace tr.eln-bodyreg-bar:contains('Clinton, Hillary'), #presidentialRace tr.eln-bodyregular:contains('Clinton, Hillary')").css('display', 'table-row');
   $("#presidentialRace tr.eln-bodyreg-bar:contains('Trump, Donald'), #presidentialRace tr.eln-bodyregular:contains('Trump, Donald')").css('display', 'table-row');
 
-  $("#mayoralRace td.eln-bodyregular:contains('Carlos Gimenez')").text(function() {
-    return $(this).text().replace('Carlos Gimenez', 'Carlos Giménez');
+  $("#mayoralRace td.eln-bodyregular:contains('Gimenez, Carlos')").text(function() {
+    return $(this).text().replace('Gimenez, Carlos', 'Giménez, Carlos');
   });
 }
 
