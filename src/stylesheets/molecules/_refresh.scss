@@ -6,13 +6,13 @@
     cursor: pointer;
     position: relative;
 
-    i {
+    img {
       transform: rotate(0deg);
       transform-origin: center;
     }
 
     &:hover {
-      i { animation: spinArrows 2s linear infinite; }
+      img { animation: spinArrows 2s linear infinite; }
       &:before {
         opacity: 1;
       }
