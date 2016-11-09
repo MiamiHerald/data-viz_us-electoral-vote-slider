@@ -88,9 +88,9 @@ class Tally {
     this.candidates.forEach(x => {
       if (x.Winner === "X") {
         if (x.CandID === "1746") {
-          $(`.fa-check.clinton`).addClass(`is-winner`);
+          $(`.clinton`).addClass(`is-winner`);
         } else if (x.CandID === "8639") {
-          $(`.fa-check.trump`).addClass(`is-winner`);
+          $(`.trump`).addClass(`is-winner`);
         }
       }
     });
