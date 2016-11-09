@@ -33,8 +33,9 @@
     &--left {
       position: relative;
 
-      i.clinton {
+      img.clinton {
         display: none;
+        width: 25px;
 
         &.is-winner {
           display: block;
@@ -43,7 +44,6 @@
             @include position(absolute, 0 null null 50%);
           }
           color: $red;
-          width: 100%;
         }
       }
     }
@@ -52,9 +52,10 @@
       position: relative;
       text-align: right;
 
-      i.trump {
+      img.trump {
         display: none;
-
+        width: 25px;
+        
         &.is-winner {
           display: block;
           @include position(absolute, -15% 110% null null);
@@ -62,7 +63,6 @@
             @include position(absolute, 0 null null -100%);
           }
           color: $red;
-          width: 100%;
         }
       }
     }
