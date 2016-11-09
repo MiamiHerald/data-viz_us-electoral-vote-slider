@@ -35,6 +35,7 @@
 
       img.clinton {
         display: none;
+        width: 25px;
 
         &.is-winner {
           display: block;
@@ -43,7 +44,6 @@
             @include position(absolute, 0 null null 50%);
           }
           color: $red;
-          width: 100%;
         }
       }
     }
@@ -54,6 +54,7 @@
 
       img.trump {
         display: none;
+        width: 25px;
 
         &.is-winner {
           display: block;
@@ -62,7 +63,6 @@
             @include position(absolute, 0 null null -100%);
           }
           color: $red;
-          width: 100%;
         }
       }
     }
